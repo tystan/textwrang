@@ -1,20 +1,24 @@
 ## `textwrang`
-[TextWrangler](http://www.barebones.com/products/textwrangler/ "Thank you Bare Bones Software!") is my text editor of choice on Mac. 
-
-The files I use to modify my use of TextWrangler are stored here.
-
-
+[TextWrangler](http://www.barebones.com/products/textwrangler/ "Thank you Bare Bones Software!") is my text editor of choice on Mac. The files I use to customise TextWrangler are stored here. See the below table for the organisation of this repository.
 
 Directory | Contents
 --- | --- 
 `as` | AppleScripts to use with TextWrangler
-`syntax` | `.plist` files for syntax highlighting of specific file types and `.bbcolors` files for colours schemes
-
+`syntax` | `.plist` files for syntax highlighting of specific file types and `.bbColorScheme` files for colours schemes (version 5+)
 
 
 
 ### TextWrangler and syntax highlighting
 
+* Users can create their own files to recognise syntax from different languages in TextWrangler. The `.plist` files in the `syntax` directory can simply be copy and pasted into  
+   `~Library/Application\ Support/TextWrangler/Language\ Modules/`
+for TextWrangler to recognise syntax for languages that don't already exist in TextWrangler.
+
+* I prefer dark colour schemes when coding - this can manually be manufactured via `preferences`. In any case, I include a `.bbColorScheme` file that can be used to modify the appearance of TextWrangler (for use in TW version 5 or above). Simply copy `.bbColorScheme` files to  
+   `~/Library/Application\ Support/TextWrangler/Color\ Schemes/`
+for colour themes to be usable by TextWrangler.
+
+Don't forget to quit and re-start TextWrangler for the above changes to take effect.
 
 ### TextWrangler and AppleScripts
 Textwrangler not only allows you to run AppleScripts with user customisable key-strokes, but it has its own Scripting Dictionary that allows AppleScripts to interact with TextWrangler (and other applications). These AppleScripts allow you to perform otherwise repetitive or time consuming task while working in TextWrangler.
@@ -44,7 +48,7 @@ The location is likely to be `~/Library/Application\ Support/TextWrangler/Script
 
 Copy and paste your scripts (or those in this repository) to this folder. TextWrangler should now be aware of your scripts. The names of the scripts in the folder should be seen under the Open Scripts Folder option when you click on the Script icon.
 
-##### Now to make key-bindings
+##### How to make key-bindings
 
 Now that your scripts are available to TextWrangler, you can go to  
    `Window -> Palettes -> Scripts`
