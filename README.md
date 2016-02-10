@@ -1,7 +1,7 @@
 # `textwrang`
 [TextWrangler](http://www.barebones.com/products/textwrangler/ "Thank you Bare Bones Software!") is my text editor of choice on Mac. 
 
-The files I use to modify my use of TextWrangler (TW) are stored here.
+The files I use to modify my use of TextWrangler are stored here.
 
 ## Directory set up
 
@@ -14,15 +14,13 @@ Directory | Contents
 
 
 
-# TW and syntax highlighting
+## TextWrangler and syntax highlighting
 
 
+## TextWrangler and AppleScripts
+Textwrangler not only allows you to run AppleScripts with user customisable key-strokes, but it has its own Scripting Dictionary that allows AppleScripts to interact with TextWrangler (and other applications). These AppleScripts allow you to perform otherwise repetitive or time consuming task while working in TextWrangler.
 
-
-# TW and AppleScripts
-Textwrangler not only allows you to run AppleScripts (AS) with user customisable key-strokes, but it has its own Scripting Dictionary that allows AS to interact with TW (and other applications). These AS allow you to perform otherwise repetitive or time consuming task while working in TW.
-
-## Example
+### Example
 As an example, the below AppleScript simply sends the selected text in TextWrangler (or line if no text is selected) to `terminal`.
 ```AppleScript
 tell application "TextWrangler"
@@ -36,24 +34,28 @@ tell application "Terminal"
 end tell
 ```
 
-# How to make TextWrangler aware of your AppleScripts
+## How to make TextWrangler aware of your AppleScripts
 
-TextWrangler has a folder specifically to hold AppleScripts it uses (that you write). You can find it by going `Script icon (next to Help) -> Open Scripts Folder`
+TextWrangler has a folder specifically to hold AppleScripts it uses (that you write). You can find it by going 
+`Script icon (next to Help) -> Open Scripts Folder`
+
 ![](https://github.com/tystan/textwrang/blob/master/open-scrpt-folder.png)
 
 The location is likely to be `~/Library/Application\ Support/TextWrangler/Scripts`
 
 Copy and paste your scripts (or those in this repository) to this folder. TextWrangler should now be aware of your scripts. The names of the scripts in the folder should be seen under the Open Scripts Folder option when you click on the Script icon.
 
-## Now to make key-bindings
+#### Now to make key-bindings
 
-Now that your scripts are available to TW, you can go to `Window -> Palettes -> Scripts`
+Now that your scripts are available to TextWrangler, you can go to 
+`Window -> Palettes -> Scripts`
+
 ![](https://github.com/tystan/textwrang/blob/master/open-palettes.png)
 
-Once the palettes window is open, you can assign key bindings to your available scripts. To do this, select a script and then press Set Shortcut; the key combination you press next is the new shortcut. Now any time you press `control+space` for example, TW will run the script associated with that key binding.
+Once the palettes window is open, you can assign key bindings to your available scripts. To do this, select a script and then press Set Shortcut; the key combination you press next is the new shortcut. Now any time you press `control+space` for example, TextWrangler will run the script associated with that key binding.
 
 
-## List of AppleScripts in `as` folder 
+### List of AppleScripts in `as` folder 
 
 File | Description
 --- | --- | ---
@@ -62,4 +64,14 @@ File | Description
 `file3`  | Does... 
 
 
-# Thanks goes to
+---
+
+## Acknowledgements
+
+Firstly thank you to Bare Bones Software for making TextWrangler available as a free version of their [BBedit](http://www.barebones.com/products/bbedit/) text editor. Even the documentation for the free version is pretty great.
+
+I have used many websites to understand how AppleScripts work and used some other websites that have provided AppleScripts that are made for TextWrangler. To the best of my memory and retrospectice searching, thank you to these websites:
+* website1
+* website2
+
+
