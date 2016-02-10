@@ -25,7 +25,7 @@ Don't forget to quit and re-start TextWrangler for the above changes to take eff
 Textwrangler not only allows you to run AppleScripts with user customisable key-strokes, but it has its own Scripting Dictionary that allows AppleScripts to interact with TextWrangler (and other applications). These AppleScripts allow you to perform otherwise repetitive or time consuming task while working in TextWrangler.
 
 #### Example
-As an example, the below AppleScript simply sends the selected text in TextWrangler (or line if no text is selected) to `terminal`.
+As an example, the below AppleScript simply sends the selected text in TextWrangler (or line if no text is selected) to `Terminal`.
 ```AppleScript
 tell application "TextWrangler"
     set the_selection to (selection of front window as string)
@@ -47,7 +47,7 @@ TextWrangler has a folder specifically to hold AppleScripts it uses (that you wr
 
 The location is likely to be `~/Library/Application\ Support/TextWrangler/Scripts`
 
-Copy and paste your scripts (or those in this repository) to this folder. TextWrangler should now be aware of your scripts. The names of the scripts in the folder should be seen under the Open Scripts Folder option when you click on the Script icon.
+Copy and paste your scripts (or those in this repository with file extension `.scpt`) to this folder. TextWrangler should now be aware of your scripts. The names of the scripts in the folder should be seen under the Open Scripts Folder option when you click on the Script icon.
 
 ##### How to make key-bindings
 
@@ -58,15 +58,24 @@ Now that your scripts are available to TextWrangler, you can go to
 
 Once the palettes window is open, you can assign key bindings to your available scripts. To do this, select a script and then press Set Shortcut; the key combination you press next is the new shortcut. Now any time you press `control+space` for example, TextWrangler will run the script associated with that key binding.
 
+![](https://github.com/tystan/textwrang/blob/master/fig/shortcut-palette.png)
 
 #### List of AppleScripts in `as` folder 
 
 File | Description
 --- | --- | ---
-`file1`  | Does... 
-`file2`  | Does... 
-`file3`  | Does... 
+`comment-line.scpt`  | Does... 
+`makefile-in-dir.scpt`  | Does... 
+`pygmentize.scpt`  | Does... 
+`pygments-style.scpt`  | Does... 
+`selection-to-r.scpt`  | Does... 
+`selection-to-sh.scpt`  | Does... 
+`tex-compile.scpt`  | Does... 
+`tex-eqn.scpt`  | Does... 
+`tex-itemize.scpt`  | Does... 
+`tex-texttt.scpt`  | Does... 
 
+		
 
 ---
 
@@ -75,7 +84,8 @@ File | Description
 Firstly thank you to Bare Bones Software for making TextWrangler available as a free version of their [BBedit](http://www.barebones.com/products/bbedit/) text editor. Even the documentation for the free version is pretty great.
 
 I have used many websites to understand how AppleScripts work and used some other websites that have provided AppleScripts that are made for TextWrangler. To the best of my memory and retrospective searching, thank you to these websites:
-* website1
-* website2
+* [Jean Thioulouse](http://pbil.univ-lyon1.fr/JTHome/SendSelToR.txt) that first alerted me to TextWrangler and AppleScripts
+* [Benjamin Waldie](http://www.mactech.com/articles/mactech/Vol.21/21.07/WorkingWithText/index.html) has an excellent run-through of manipulating text in AppleScripts
+* [`rupa`](https://github.com/rupa/applescript) for the shell script to extract source code from `.scpt` files
 
 
