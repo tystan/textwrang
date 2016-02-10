@@ -35,8 +35,8 @@ end tell
 
 ### How to make TextWrangler aware of your AppleScripts
 
-TextWrangler has a folder specifically to hold AppleScripts it uses (that you write). You can find it by going 
-`Script icon (next to Help) -> Open Scripts Folder`
+TextWrangler has a folder specifically to hold AppleScripts it uses (that you write). You can find it by going  
+   `Script icon (next to Help) -> Open Scripts Folder`
 
 ![](https://github.com/tystan/textwrang/blob/master/open-scrpt-folder.png)
 
@@ -46,8 +46,8 @@ Copy and paste your scripts (or those in this repository) to this folder. TextWr
 
 ##### Now to make key-bindings
 
-Now that your scripts are available to TextWrangler, you can go to 
-`Window -> Palettes -> Scripts`
+Now that your scripts are available to TextWrangler, you can go to  
+   `Window -> Palettes -> Scripts`
 
 ![](https://github.com/tystan/textwrang/blob/master/open-palettes.png)
 
