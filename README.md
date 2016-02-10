@@ -1,5 +1,5 @@
 # textwrang
-[TextWrangler](http://www.barebones.com/products/textwrangler/ Thank you Bare Bones Software!) is my text editor of choice on Mac. 
+[TextWrangler](http://www.barebones.com/products/textwrangler/ "Thank you Bare Bones Software!") is my text editor of choice on Mac. 
 
 The files I use to modify my use of TextWrangler (TW) are stored here.
 
