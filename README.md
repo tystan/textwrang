@@ -38,7 +38,7 @@ end tell
 TextWrangler has a folder specifically to hold AppleScripts it uses (that you write). You can find it by going  
    `Script icon (next to Help) -> Open Scripts Folder`
 
-![](https://github.com/tystan/textwrang/fig/blob/master/open-scrpt-folder.png)
+![](https://github.com/tystan/textwrang/blob/master/fig/open-scrpt-folder.png)
 
 The location is likely to be `~/Library/Application\ Support/TextWrangler/Scripts`
 
@@ -49,7 +49,7 @@ Copy and paste your scripts (or those in this repository) to this folder. TextWr
 Now that your scripts are available to TextWrangler, you can go to  
    `Window -> Palettes -> Scripts`
 
-![](https://github.com/tystan/textwrang/fig/blob/master/open-palettes.png)
+![](https://github.com/tystan/textwrang/blob/master/fig/open-palettes.png)
 
 Once the palettes window is open, you can assign key bindings to your available scripts. To do this, select a script and then press Set Shortcut; the key combination you press next is the new shortcut. Now any time you press `control+space` for example, TextWrangler will run the script associated with that key binding.
 
