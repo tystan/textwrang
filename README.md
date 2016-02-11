@@ -12,7 +12,7 @@ Directory | Heading below | Contents
 
 * Users can create their own files to recognise syntax from different languages in TextWrangler. The `.plist` files in the `syntax` directory can simply be copy and pasted into  
    `~Library/Application\ Support/TextWrangler/Language\ Modules/`  
-for TextWrangler to recognise syntax for languages that don't already exist in TextWrangler.
+for TextWrangler to recognise syntax for languages that don't already exist in TextWrangler. You don't need to start from scratch, some languages are already [here](http://www.barebones.com/support/bbedit/plugin_library.html).
 
 * I prefer dark colour schemes when coding - this can manually be manufactured via `preferences`. In any case, I include a `.bbColorScheme` file that can be used to modify the appearance of TextWrangler (for use in TW version 5 or above). Simply copy `.bbColorScheme` files to  
    `~/Library/Application\ Support/TextWrangler/Color\ Schemes/`  
@@ -64,16 +64,16 @@ Once the palettes window is open, you can assign key bindings to your available 
 
 File | Description
 --- | --- | ---
-`comment-line.scpt`  | Does... 
-`makefile-in-dir.scpt`  | Does... 
-`pygmentize.scpt`  | Does... 
-`pygments-style.scpt`  | Does... 
-`selection-to-r.scpt`  | Does... 
-`selection-to-sh.scpt`  | Does... 
-`tex-compile.scpt`  | Does... 
-`tex-eqn.scpt`  | Does... 
-`tex-itemize.scpt`  | Does... 
-`tex-texttt.scpt`  | Does... 
+`comment-line.scpt`  | The text of the current line in TextWrangler is surrounded by `#` characters (comment characters in `R`) to make the entire line a total of 88 characters wide (my page width). Good for make headers in code. 
+`makefile-in-dir.scpt`  | When invoked from TextWrangler, the AppleScript changes the directory location of the open terminal, then runs `make`. Assumes there is a `makefile` file in the directory. [Rob J Hyndman](http://robjhyndman.com/hyndsight/makefiles/) has a good introduction on these handy files.
+`pygmentize.scpt`  | When an `R` file is the current document in TextWrangler, the AppleScript runs [Pygments](http://pygments.org/) command line utility on the current document. Pygments is a syntax highlighter, I use it to have syntax highlighted (and maths symbols in comments) in `.tex` files. This AppleScript could easily be modified to convert `C++` code to syntax highlighted html, for example.
+`pygments-style.scpt`  | Simple creation of the style file needed in the LaTeX preamble to allow syntax highlighting. relates to `pygmentize.scpt`.
+`selection-to-r.scpt`  | Takes the selected text (or current line if no selection) and executes it in `R`. Attempts to move the cursor one line down once returning to TextWrangler.
+`selection-to-sh.scpt`  | Same as `selection-to-r.scpt` but sends it to `Terminal`.
+`tex-compile.scpt`  | Requires a `.tex` or `.Rnw` ([knitr](http://yihui.name/knitr/)) file to be the current document in TextWrangler. If the file has a `.Rnw` file extension, the AppleScript 'knits' the file (evaluates the `R` code within the document via command line), then uses latex make (`latexmk`) to compile the resulting `.tex` file. If the file has a `.tex` file extension, the AppleScript simply runs `latexmk` on the file to compile the LaTeX file to PDF.
+`tex-eqn.scpt`  | Places `$` characters around the selected text. i.e. makes in-line equation text in LaTeX. 
+`tex-itemize.scpt`  | Makes each selected line an `\item` in an `itemize` list in LaTeX. Also places `\begin{itemize}` and `\end{itemize}` before and after the selection.
+`tex-texttt.scpt`  | Places `\texttt{` before the selected text and `}` after. i.e. makes the selected text typewriter font in LaTeX. 
 
 		
 
@@ -83,8 +83,8 @@ File | Description
 
 Firstly thank you to Bare Bones Software for making TextWrangler available as a free version of their [BBedit](http://www.barebones.com/products/bbedit/) text editor. Even the documentation for the free version is pretty great.
 
-I have used many websites to understand how AppleScripts work and used some other websites that have provided AppleScripts that are made for TextWrangler. To the best of my memory and retrospective searching, thank you to these websites:
-* [Jean Thioulouse](http://pbil.univ-lyon1.fr/JTHome/SendSelToR.txt) that first alerted me to TextWrangler and AppleScripts
+I have used many websites to understand how AppleScripts work and used some other websites that have provided AppleScripts that are made for TextWrangler. To the best of my memory and retrospective searching, thank you to the following:
+* The code written by [Jean Thioulouse](http://pbil.univ-lyon1.fr/JTHome/SendSelToR.txt) first alerted me to executing AppleScripts in TextWrangler 
 * [Benjamin Waldie](http://www.mactech.com/articles/mactech/Vol.21/21.07/WorkingWithText/index.html) has an excellent run-through of manipulating text in AppleScripts
 * [`rupa`](https://github.com/rupa/applescript) for the shell script to extract source code from `.scpt` files
 
