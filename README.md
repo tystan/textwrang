@@ -63,7 +63,7 @@ Once the palettes window is open, you can assign key bindings to your available 
 #### List of AppleScripts in `as` folder 
 
 File | Description
---- | --- | ---
+--- | --- 
 `comment-line.scpt`  | The text of the current line in TextWrangler is surrounded by `#` characters (comment characters in `R`) to make the entire line a total of 88 characters wide (my page width). Good for make headers in code. 
 `makefile-in-dir.scpt`  | When invoked from TextWrangler, the AppleScript changes the directory location of the open terminal, then runs `make`. Assumes there is a `makefile` file in the directory. [Rob J Hyndman](http://robjhyndman.com/hyndsight/makefiles/) has a good introduction on these handy files.
 `pygmentize.scpt`  | When an `R` file is the current document in TextWrangler, the AppleScript runs [Pygments](http://pygments.org/) command line utility on the current document. Pygments is a syntax highlighter, I use it to have syntax highlighted (and maths symbols in comments) in `.tex` files. This AppleScript could easily be modified to convert `C++` code to syntax highlighted html, for example.
